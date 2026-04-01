@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminarias Pro</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header src="imagenes/logo.png" class="logo-centro">
+
+    <img src="imagenes/logo4.png" class="logo-izq">
+
+    <div class="titulo">
+        <h1>LUMINARIAS FOREVERLEO</h1>
+        <p>Venta Mayorista de Iluminación</p>
+    </div>
+
+    <img src="imagenes/logo4.png" class="logo-der">
+
+</header>
+
+<section class="info">
+    <div class="info-contenido">
+
+        <div class="item">
+            <span class="icono">✔</span>
+            <span>Productos garantizados</span>
+        </div>
+
+        <div class="item">
+            <span class="icono">💼</span>
+            <span>Venta al por mayor</span>
+        </div>
+
+        <div class="item">
+            <span class="icono">🚚</span>
+            <span>Envíos a todo Bolivia</span>
+        </div>
+
+    </div>
+</section>
+
+<nav>
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('led')">LED</button>
+    <button onclick="filtrar('reflector')">Reflectores</button>
+    <button onclick="filtrar('panel')">Paneles</button>
+    <button onclick="filtrar('lineal')">Led Lineal</button>
+    <button onclick="filtrar('industrial')">Sector Industrial</button>
+    <button onclick="filtrar('chapa')">Chapas</button>
+    
+</nav>
+
+<section class="buscador">
+    <input type="text" id="buscar" placeholder="Buscar producto...">
+</section>
+
+<section class="catalogo">
+
+    <div class="producto led">
+        <img src="imagenes/qp07w.jpg" alt="Foco LED">
+        <h3>Foco LED 07W</h3>
+        <p>Código: QP-07W</p>
+        <p class="precio">7.40 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/qp24w.jpg" alt="Foco LED">
+        <h3>Foco LED 24W</h3>
+        <p>Código: QP-24W</p>
+        <p class="precio">20.80 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/hpa40w.jpg" alt="Foco LED">
+        <h3>Foco LED 40W Cálido</h3>
+        <p>Código: HPA-40W-WW</p>
+        <p class="precio">32.50 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/hpa50w.jpg" alt="Foco LED">
+        <h3>Foco LED 50W Cálido</h3>
+        <p>Código: HPA-50W-WW</p>
+        <p class="precio">37.50 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/hpa60w.jpg" alt="Foco LED">
+        <h3>Foco LED 60W Cálido</h3>
+        <p>Código: HPA-60W-WW</p>
+        <p class="precio">45.00 Bs</p>
+    </div>
+    
+    <div class="producto led">
+        <img src="imagenes/ufo40w.jpg" alt="Foco LED">
+        <h3>Foco LED plato Económico 40W</h3>
+        <p>Código: UFO-E-40W </p>
+        <p class="precio">50.00 Bs</p>
+    </div>
+    <div class="producto led">
+        <div class="oferta">OFERTA</div>
+        <img src="imagenes/ufo70w.jpg" alt="Foco LED">
+        <h3>Foco LED plato Económico 70W</h3>
+        <p>Código: UFO-E-70W </p>
+        <p class="precio">
+        <span class="precio-antiguo">Bs. 75.00</span>
+        <span class="precio-nuevo">Bs. 65.00</span>
+        </p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/ufo70w1.jpg" alt="Foco LED">
+        <h3>Foco LED plato 70W</h3>
+        <p>Código: UFO-70W 300</p>
+        <p class="precio">81.30 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/ft70w.jpg" alt="Foco LED">
+        <h3>Foco LED plato 70W</h3>
+        <p>Código: FT-UFO-70W </p>
+        <p class="precio">75.00 Bs</p>
+    </div>
+    <div class="producto led">
+        <img src="imagenes/5yp50w.jpg" alt="Foco LED">
+        <h3>Foco LED Estrella 50W</h3>
+        <p>Código: 5YP-50W </p>
+        <p class="precio">50.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd505430w.jpg" alt="Reflector">
+        <h3>Reflector 30W</h3>
+        <p>Código: TGD-5054-30W</p>
+        <p class="precio">74.40 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd505450w.jpg" alt="Reflector">
+        <h3>Reflector 50W</h3>
+        <p>Código: TGD-5054-50W</p>
+        <p class="precio">118.10 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd5054100w.jpg" alt="Reflector">
+        <h3>Reflector 100W</h3>
+        <p>Código: TGD-5054-100W</p>
+        <p class="precio">162.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd5054150w.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGD-5054-150W</p>
+        <p class="precio">275.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd5054200w.jpg" alt="Reflector">
+        <h3>Reflector 200W</h3>
+        <p>Código: TGD-5054-200W</p>
+        <p class="precio">375.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgd5054300w.jpg" alt="Reflector">
+        <h3>Reflector 300W</h3>
+        <p>Código: TGD-5054-300W</p>
+        <p class="precio">487.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdbjx150w.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGD-BJX-150W</p>
+        <p class="precio">225.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdbjx300w.jpg" alt="Reflector">
+        <h3>Reflector 300W</h3>
+        <p>Código: TGD-BJX-300W</p>
+        <p class="precio">412.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/hy150w.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGD-HY-150W</p>
+        <p class="precio">250.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/xpg100w.jpg" alt="Reflector">
+        <h3>Reflector 100W</h3>
+        <p>Código: TGD-XPG-100W</p>
+        <p class="precio">111.40 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/xpg200w.jpg" alt="Reflector">
+        <h3>Reflector 200W</h3>
+        <p>Código: TGD-XPG-200W</p>
+        <p class="precio">230.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/xpg300w.jpg" alt="Reflector">
+        <h3>Reflector 300W</h3>
+        <p>Código: TGD-XPG-300W</p>
+        <p class="precio">312.50 Bs</p>
+    </div>
+    
+    <div class="producto reflector">
+        <img src="imagenes/fm.jpg" alt="Reflector">
+        <h3>Reflector 50W</h3>
+        <p>Código: TGD-FM-50W (SANTA CRUZ)</p>
+        <p class="precio">125.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/fm200w.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGD-FM-150W</p>
+        <p class="precio">312.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/fm200w.jpg" alt="Reflector">
+        <h3>Reflector 200W</h3>
+        <p>Código: TGD-FM-200W</p>
+        <p class="precio">375.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgda.jpg" alt="Reflector">
+        <h3>Reflector 100W</h3>
+        <p>Código: TGDA-100W (SANTA CRUZ)</p>
+        <p class="precio">170.60 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgda.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGDA-150W</p>
+        <p class="precio">215.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgda.jpg" alt="Reflector">
+        <h3>Reflector 200W</h3>
+        <p>Código: TGDA-200W (SANTA CRUZ)</p>
+        <p class="precio">285.60 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdb.jpg" alt="Reflector">
+        <h3>Reflector 150W</h3>
+        <p>Código: TGDB-150W (LA PAZ)</p>
+        <p class="precio">250.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdb.jpg" alt="Reflector">
+        <h3>Reflector 200W</h3>
+        <p>Código: TGDB-200W (SANTA CRUZ)</p>
+        <p class="precio">312.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/dcb300weco.jpg" alt="Reflector">
+        <h3>Reflector 300W ECO</h3>
+        <p>Código: TGD-DCB-300W-ECO</p>
+        <p class="precio">590.60 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/dcb400weco.jpg" alt="Reflector">
+        <h3>Reflector 400W ECO</h3>
+        <p>Código: TGD-DCB-400W-ECO</p>
+        <p class="precio">742.50 Bs</p>
+    </div>
+    
+    <div class="producto reflector">
+        <img src="imagenes/dcb500weco.jpg" alt="Reflector">
+        <h3>Reflector 500W ECO</h3>
+        <p>Código: TGD-DCB-500W-ECO</p>
+        <p class="precio">877.50 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/dcb600weco.jpg" alt="Reflector">
+        <h3>Reflector 600W ECO</h3>
+        <p>Código: TGD-DCB-600W-ECO</p>
+        <p class="precio">920.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/pstgda.jpg" alt="Reflector">
+        <h3>Reflector Solar 100w</h3>
+        <p>Código: PSTGD-100W-A</p>
+        <p class="precio">455.60 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/pstgda.jpg" alt="Reflector">
+        <h3>Reflector Solar 200w</h3>
+        <p>Código: PSTGD-200W-A</p>
+        <p class="precio">624.40 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/pstgdb.jpg" alt="Reflector">
+        <h3>Reflector Solar 100w</h3>
+        <p>Código: PSTGD-100W-B</p>
+        <p class="precio">350.00 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/pstgdb.jpg" alt="Reflector">
+        <h3>Reflector Solar 200w</h3>
+        <p>Código: PSTGD-200W-B</p>
+        <p class="precio">624.40 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/pstgdb.jpg" alt="Reflector">
+        <h3>Reflector Solar 300w</h3>
+        <p>Código: PSTGD-300W-B</p>
+        <p class="precio">759.40 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdyx.jpg" alt="Reflector">
+        <h3>Reflector Solar 300w</h3>
+        <p>Código: SOLAR TGDYX-300W</p>
+        <p class="precio">548.10 Bs</p>
+    </div>
+    <div class="producto reflector">
+        <img src="imagenes/tgdyx.jpg" alt="Reflector">
+        <h3>Reflector Solar 400w</h3>
+        <p>Código: SOLAR TGDYX-400W</p>
+        <p class="precio">709.40 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel60x60sc.jpg" alt="Panel">
+        <h3>Panel 60x60 60W Sobreponer</h3>
+        <p>Código: PANEL 60X60 SC</p>
+        <p class="precio">159.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel60x60ic.jpg" alt="Panel">
+        <h3>Panel 60x60 60W Empotrar</h3>
+        <p>Código: PANEL 60X60 IC</p>
+        <p class="precio">130.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel30x120ic.jpg" alt="Panel">
+        <h3>Panel 30X120 60W Empotrar</h3>
+        <p>Código: PANEL 30X120 IC</p>
+        <p class="precio">170.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel30x120sc.jpg" alt="Panel">
+        <h3>Panel 30X120 60W Sobreponer</h3>
+        <p>Código: PANEL 30X120 SC</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel12wsr.jpg" alt="Panel">
+        <h3>Panel 12W Sobreponer Redondo</h3>
+        <p>Código: PANEL 12W SR</p>
+        <p class="precio">20.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel18wsr.jpg" alt="Panel">
+        <h3>Panel 18W Sobreponer Redondo</h3>
+        <p>Código: PANEL 18W SR</p>
+        <p class="precio">25.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wsr.jpg" alt="Panel">
+        <h3>Panel 24W Sobreponer Redondo</h3>
+        <p>Código: PANEL 24W SR</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel12wsc.jpg" alt="Panel">
+        <h3>Panel 12W Sobreponer Cuadrado</h3>
+        <p>Código: PANEL 12W SC</p>
+        <p class="precio">20.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel18wsc.jpg" alt="Panel">
+        <h3>Panel 18W Sobreponer Cuadrado</h3>
+        <p>Código: PANEL 18W SC</p>
+        <p class="precio">25.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wsc.jpg" alt="Panel">
+        <h3>Panel 24W Sobreponer Cuadrado</h3>
+        <p>Código: PANEL 24W SC</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel12wic.jpg" alt="Panel">
+        <h3>Panel 12W Empotrar Cuadrado</h3>
+        <p>Código: PANEL 12W IC</p>
+        <p class="precio">18.50 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel18wic.jpg" alt="Panel">
+        <h3>Panel 18W Empotrar Cuadrado</h3>
+        <p>Código: PANEL 18W IC</p>
+        <p class="precio">24.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wic.jpg" alt="Panel">
+        <h3>Panel 24W Empotrar Cuadrado</h3>
+        <p>Código: PANEL 24W IC</p>
+        <p class="precio">39.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel12wir.jpg" alt="Panel">
+        <h3>Panel 12W Empotrar Redondo</h3>
+        <p>Código: PANEL 12W IR</p>
+        <p class="precio">18.50 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel18wir.jpg" alt="Panel">
+        <h3>Panel 18W Empotrar Redondo</h3>
+        <p>Código: PANEL 18W IR</p>
+        <p class="precio">24.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wir.jpg" alt="Panel">
+        <h3>Panel 24W Empotrar Redondo</h3>
+        <p>Código: PANEL 24W IR</p>
+        <p class="precio">39.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wsra.jpg" alt="Panel">
+        <h3>Panel 24W Torta Sobreponer Redondo</h3>
+        <p>Código: PANEL-24W-SR-A</p>
+        <p class="precio">35.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel36wsra.jpg" alt="Panel">
+        <h3>Panel 36W Torta Sobreponer Redondo</h3>
+        <p>Código: PANEL-36W-SR-A</p>
+        <p class="precio">53.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel48wsra.jpg" alt="Panel">
+        <h3>Panel 48W Torta Sobreponer Redondo</h3>
+        <p>Código: PANEL-48W-SR-A</p>
+        <p class="precio">70.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wsca.jpg" alt="Panel">
+        <h3>Panel 24W Torta Sobreponer Cuadrado</h3>
+        <p>Código: PANEL-24W-SC-A</p>
+        <p class="precio">35.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel36wsca.jpg" alt="Panel">
+        <h3>Panel 36W Torta Sobreponer Cuadrado</h3>
+        <p>Código: PANEL-36W-SC-A</p>
+        <p class="precio">53.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel48wsca.jpg" alt="Panel">
+        <h3>Panel 48W Torta Sobreponer Cuadrado</h3>
+        <p>Código: PANEL-48W-SC-A</p>
+        <p class="precio">70.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wira.jpg" alt="Panel">
+        <h3>Panel 24W Torta Empotrar Redondo</h3>
+        <p>Código: PANEL-24W-IR-A</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel36wira.jpg" alt="Panel">
+        <h3>Panel 36W Torta Empotrar Redondo</h3>
+        <p>Código: PANEL-36W-IR-A</p>
+        <p class="precio">45.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel48wira.jpg" alt="Panel">
+        <h3>Panel 48W Torta Empotrar Redondo</h3>
+        <p>Código: PANEL-48W-IR-A</p>
+        <p class="precio">60.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel24wica.jpg" alt="Panel">
+        <h3>Panel 24W Torta Empotrar Cuadrado</h3>
+        <p>Código: PANEL-24W-IC-A</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel36wica.jpg" alt="Panel">
+        <h3>Panel 36W Torta Empotrar Cuadrado</h3>
+        <p>Código: PANEL-36W-IC-A</p>
+        <p class="precio">45.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel48wica.jpg" alt="Panel">
+        <h3>Panel 48W Torta Empotrar Cuadrado</h3>
+        <p>Código: PANEL-48W-IC-A</p>
+        <p class="precio">60.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/panel06wic.jpg" alt="Panel">
+        <h3>Panel 06 Empotrar Cuadrado</h3>
+        <p>Código: PANEL 06W IC</p>
+        <p class="precio">13.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/blanco.negro.jpg" alt="Panel">
+        <h3>Dicroico 07w Blanco+Negro</h3>
+        <p>Código: TD-7W(BLANCO+NEGRO) (</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/blanco.plata.jpg" alt="Panel">
+        <h3>Dicroico 07w Blanco+Plata</h3>
+        <p>Código: TD-7W(BLANCO+PLATA) (</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/blanco.dorado.jpg" alt="Panel">
+        <h3>Dicroico 07w Blanco+Dorado</h3>
+        <p>Código: TD-7W(BLANCO+DORADO) (</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/negro.plata.jpg" alt="Panel">
+        <h3>Dicroico 07w Negro+Plata</h3>
+        <p>Código: TD-7W(NEGRO+PLATA) (</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/naranja12w.jpg" alt="Panel">
+        <h3>Driver 12W Naranja</h3>
+        <p>Código: DRIVER 12W NARANJA </p>
+        <p class="precio">12.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/naranja18w.jpg" alt="Panel">
+        <h3>Driver 18W Naranja</h3>
+        <p>Código: DRIVER 18W NARANJA </p>
+        <p class="precio">14.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/naranja24w.jpg" alt="Panel">
+        <h3>Driver 24W Naranja</h3>
+        <p>Código: DRIVER 24W NARANJA </p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/naranja36w.jpg" alt="Panel">
+        <h3>Driver 36W Naranja</h3>
+        <p>Código: DRIVER 36W NARANJA </p>
+        <p class="precio">18.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/naranja48w.jpg" alt="Panel">
+        <h3>Driver 48W Naranja</h3>
+        <p>Código: DRIVER 48W NARANJA </p>
+        <p class="precio">20.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/plomo06w.jpg" alt="Panel">
+        <h3>Driver 06W Plomo</h3>
+        <p>Código: DRIVER 06W PLOMO </p>
+        <p class="precio">7.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/plomo18w.jpg" alt="Panel">
+        <h3>Driver 18W Plomo</h3>
+        <p>Código: DRIVER 18W PLOMO </p>
+        <p class="precio">12.00 Bs</p>
+    </div>
+    <div class="producto panel">
+        <img src="imagenes/plomo24w.jpg" alt="Panel">
+        <h3>Driver 24W Plomo</h3>
+        <p>Código: DRIVER 24W PLOMO </p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+   <div class="producto panel">
+        <img src="imagenes/plomo60w.jpg" alt="Panel">
+        <h3>Driver 60W Plomo</h3>
+        <p>Código: DRIVER 60W PLOMO </p>
+        <p class="precio">25.60 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/hb100w.jpg" alt="Industrial">
+        <h3>CAMPANA DE 100W</h3>
+        <p>Código: GKD/HB-100W </p>
+        <p class="precio">240.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/hb150w.jpg" alt="Industrial">
+        <h3>CAMPANA DE 150W</h3>
+        <p>Código: GKD/HB-150W </p>
+        <p class="precio">300.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/hb200w.jpg" alt="Industrial">
+        <h3>CAMPANA DE 200W</h3>
+        <p>Código: GKD/HB-200W </p>
+        <p class="precio">400.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/hb300w.jpg" alt="Industrial">
+        <h3>CAMPANA DE 300W</h3>
+        <p>Código: GKD/HB-300W </p>
+        <p class="precio">500.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/hb300w.jpg" alt="Industrial">
+        <h3>CAMPANA DE 300W</h3>
+        <p>Código: GKD/HB-300W </p>
+        <p class="precio">500.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldb100w.jpg" alt="Industrial">
+        <h3>Alumbrado 100W</h3>
+        <p>Código: LDB-100W</p>
+        <p class="precio">506.30 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldb150w.jpg" alt="Industrial">
+        <h3>Alumbrado 150W</h3>
+        <p>Código: LDB-150W</p>
+        <p class="precio">675.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldb200w.jpg" alt="Industrial">
+        <h3>Alumbrado 200W</h3>
+        <p>Código: LDB-200W</p>
+        <p class="precio">843.80 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldfy60w.jpg" alt="Industrial">
+        <h3>Alumbrado 60W</h3>
+        <p>Código: LDFY-60W</p>
+        <p class="precio">380.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldfy100w.jpg" alt="Industrial">
+        <h3>Alumbrado 100W</h3>
+        <p>Código: LDFY-100W</p>
+        <p class="precio">490.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldfy150w.jpg" alt="Industrial">
+        <h3>Alumbrado 150W</h3>
+        <p>Código: LDFY-150W</p>
+        <p class="precio">550.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/tyd100w.jpg" alt="Industrial">
+        <h3>Alumbrado Isla 100W</h3>
+        <p>Código: TYD-100W</p>
+        <p class="precio">900.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/tyd100wsc.jpg" alt="Industrial">
+        <h3>Alumbrado Isla 100W Con Fotocelula</h3>
+        <p>Código: TYD-100W-SC</p>
+        <p class="precio">920.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ventilador.jpg" alt="Industrial">
+        <h3>Ventilador</h3>
+        <p>Código: ER1020 (VENTILADOR)</p>
+        <p class="precio">170.00 Bs</p>
+    </div>
+
+    <div class="producto industrial">
+        <img src="imagenes/psld60w.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 60W</h3>
+        <p>Código: SOLAR PSLD-60W-A</p>
+        <p class="precio">263.30 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/psld90w.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 90W</h3>
+        <p>Código: SOLAR PSLD-90W-A</p>
+        <p class="precio">337.50 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/psld120w.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 120W</h3>
+        <p>Código: SOLAR PSLD-120W-A</p>
+        <p class="precio">506.30 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/psld200w.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 200W</h3>
+        <p>Código: SOLAR PSLD-200W-B</p>
+        <p class="precio">607.50 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/psld300w.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 300W</h3>
+        <p>Código: SOLAR PSLD-300W-B</p>
+        <p class="precio">690.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldrs.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 300W</h3>
+        <p>Código: SOLAR LDRS-300W</p>
+        <p class="precio">500.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldrs.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 400W</h3>
+        <p>Código: SOLAR LDRS-400W</p>
+        <p class="precio">687.50 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldhn.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 300W</h3>
+        <p>Código: SOLAR LDHN-300W</p>
+        <p class="precio">502.50 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldhn.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 400W</h3>
+        <p>Código: SOLAR LDHN-400W</p>
+        <p class="precio">607.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldjd.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 300W</h3>
+        <p>Código: SOLAR LDJD-300W</p>
+        <p class="precio">590.60 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldjd.jpg" alt="Industrial">
+        <h3>Alumbrado Solar 400W</h3>
+        <p>Código: SOLAR LDJD-400W</p>
+        <p class="precio">725.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/dg50mm.jpg" alt="Industrial">
+        <h3>Brazo Para Alumbrado Público 50CM</h3>
+        <p>Código: DG-50MM*L50CM</p>
+        <p class="precio">33.80 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/dg60mm.jpg" alt="Industrial">
+        <h3>Brazo Para Alumbrado Público 50CM</h3>
+        <p>Código: DG-60MM*L50CM</p>
+        <p class="precio">42.50 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/wg50mm.jpg" alt="Industrial">
+        <h3>Brazo Para Alumbrado Público 100CM</h3>
+        <p>Código: WG-50MM*L100CM</p>
+        <p class="precio">65.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/wg60mm.jpg" alt="Industrial">
+        <h3>Brazo Para Alumbrado Público 100CM</h3>
+        <p>Código: WG-60MM*L100CM</p>
+        <p class="precio">70.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/ldg58mm.jpg" alt="Industrial">
+        <h3>Brazo Para Alumbrado Público 50CM</h3>
+        <p>Código: LDG-58MM*L50CM</p>
+        <p class="precio">21.30 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/fotocelula.jpg" alt="Industrial">
+        <h3>Fotocelula 100W 150W 200W</h3>
+        <p>Código: LDB-FOTOCELULA</p>
+        <p class="precio">41.90 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/soquet.jpg" alt="Industrial">
+        <h3>Soquet para Ventilador de Techo</h3>
+        <p>Código: ER1020-P</p>
+        <p class="precio">13.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/cx132.jpg" alt="Industrial">
+        <h3>Bomba de Agua</h3>
+        <p>Código: CX-132</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    <div class="producto industrial">
+        <img src="imagenes/cx1781.jpg" alt="Industrial">
+        <h3>Bomba de Agua</h3>
+        <p>Código: CX-1781</p>
+        <p class="precio">60.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/ft810w.jpg" alt="Lineal">
+        <h3>Tubo Ahumado 10W 60 CM.</h3>
+        <p>Código: FT8-10W-60</p>
+        <p class="precio">11.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/ft820w.jpg" alt="Lineal">
+        <h3>Tubo Ahumado 20W 120 CM.</h3>
+        <p>Código: FT8-20W-120</p>
+        <p class="precio">13.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/tt810w.jpg" alt="Lineal">
+        <h3>Tubo Transparente 10W 60 CM.</h3>
+        <p>Código: TT8-10W-60</p>
+        <p class="precio">11.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/tt820w.jpg" alt="Lineal">
+        <h3>Tubo Transparente 20W 120 CM.</h3>
+        <p>Código: TT8-20W-120</p>
+        <p class="precio">13.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/t8ax160.jpg" alt="Lineal">
+        <h3>Base simple 60CM.</h3>
+        <p>Código: T8AX1-60</p>
+        <p class="precio">7.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/t8ax1120.jpg" alt="Lineal">
+        <h3>Base simple 120CM.</h3>
+        <p>Código: T8AX1-120</p>
+        <p class="precio">10.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/t8ax2120.jpg" alt="Lineal">
+        <h3>Base Doble Mariposa 120CM.</h3>
+        <p>Código: T8AX2-120</p>
+        <p class="precio">11.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/t8bx2120.jpg" alt="Lineal">
+        <h3>Base Doble Sin Alero 120CM.</h3>
+        <p>Código: T8BX2-120</p>
+        <p class="precio">11.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/sft8x1120.jpg" alt="Lineal">
+        <h3>Base Acrilico Simple 120CM.</h3>
+        <p>Código: SFT8X1-120</p>
+        <p class="precio">62.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/sft8x260.jpg" alt="Lineal">
+        <h3>Base Acrilico Doble 60CM.</h3>
+        <p>Código: SFT8X2-60</p>
+        <p class="precio">93.10 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/sft8x2120.jpg" alt="Lineal">
+        <h3>Base Acrilico Doble 120CM.</h3>
+        <p>Código: SFT8X2-120</p>
+        <p class="precio">118.10 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd20wa.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 20W 60CM Ahumado</h3>
+        <p>Código: JHD-20W-60-A</p>
+        <p class="precio">35.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd20wb.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 20W 60CM Transparente</h3>
+        <p>Código: JHD-20W-60-B</p>
+        <p class="precio">35.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd40wa.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 40W 120CM Ahumado</h3>
+        <p>Código: JHD-40W-120-A</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd40wb.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 40W 120CM Transparente</h3>
+        <p>Código: JHD-40W-120-B</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd100wa.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 100W 120CM Ahumado</h3>
+        <p>Código: JHD-100W-120-A</p>
+        <p class="precio">126.90 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd100wb.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 100W 120CM Transparente</h3>
+        <p>Código: JHD-100W-120-B</p>
+        <p class="precio">126.90 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd72w.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica de 72W 120CM Ahumado</h3>
+        <p>Código: JHD-72W-120-A</p>
+        <p class="precio">84.40 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd40wca.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica Cuadrada 40W 120CM Ahumado</h3>
+        <p>Código: JHD-40W-120-CA</p>
+        <p class="precio">42.50 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/jhd40wcb.jpg" alt="Lineal">
+        <h3>Pantalla Acrílica Cuadrada 40W 120CM Transparente</h3>
+        <p>Código: JHD-40W-120-CB</p>
+        <p class="precio">41.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonblanco.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Blanco</h3>
+        <p>Código: CINTA NEON-220V-BLANCO</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonazul.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Azul</h3>
+        <p>Código: CINTA NEON-220V-AZUL</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonceleste.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Azul</h3>
+        <p>Código: CINTA NEON-220V-AZUL</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonrosa.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Rosa</h3>
+        <p>Código: CINTA NEON-220V-ROSA</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonverde.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Verde</h3>
+        <p>Código: CINTA NEON-220V-VERDE</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonamarillo.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Amarillo</h3>
+        <p>Código: CINTA NEON-220V-AMARILLO</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonnaranja.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Naranja</h3>
+        <p>Código: CINTA NEON-220V-NARANJA</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neoncalido.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Cálido</h3>
+        <p>Código: CINTA NEON-220V-CÁLIDO</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonazul.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Azúl</h3>
+        <p>Código: CINTA NEON-220V-AZÚL</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/neonrojo.jpg" alt="Lineal">
+        <h3>Cinta Neon 220V Rojo</h3>
+        <p>Código: CINTA NEON-220V-ROJO</p>
+        <p class="precio">1000.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/doblerosa.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Rosa</h3>
+        <p>Código: CINTA DOBLE-220V-ROSA</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/dobleazul.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Azúl</h3>
+        <p>Código: CINTA DOBLE-220V-AZUL</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/dobleblanco.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Blanco</h3>
+        <p>Código: CINTA DOBLE-220V-BLANCO</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/dobleverde.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Verde</h3>
+        <p>Código: CINTA DOBLE-220V-VERDE</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/doblenaranja.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Naranja</h3>
+        <p>Código: CINTA DOBLE-220V-NARANJA</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/dobleceleste.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Celeste</h3>
+        <p>Código: CINTA DOBLE-220V-CELESTE</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/doblecalido.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V Cálido</h3>
+        <p>Código: CINTA DOBLE-220V-CÁLIDO</p>
+        <p class="precio">1125.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/rgb.jpg" alt="Lineal">
+        <h3>Cinta Doble Chip 220V RGB</h3>
+        <p>Código: CINTA DOBLE-220V-RGB</p>
+        <p class="precio">1250.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/cinta12vverde.jpg" alt="Lineal">
+        <h3>Cinta 12V 5MTS Verde,Cálido</h3>
+        <p>Código: CINTA 12V 5MTS VERDE,CÁLIDO</p>
+        <p class="precio">40.00 Bs</p>
+    </div>
+    
+    <div class="producto lineal">
+        <img src="imagenes/12vblanco.jpg" alt="Lineal">
+        <h3>Cinta 12V 5MTS Blanco,Cálido para Ripiados</h3>
+        <p>Código: CINTA 12V 5MTS BLANCO,CÁLIDO</p>
+        <p class="precio">75.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/15X15aluminium.jpg" alt="Lineal">
+        <h3>Base de Cinta Para Ripiados</h3>
+        <p>Código: REPUESTO DE LAMPARA 15X15 (0,8)</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/12v.jpg" alt="Lineal">
+        <h3>Transformador negro 12v</h3>
+        <p>Código: TRANSFORMADOR 12V </p>
+        <p class="precio">25.70 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/adaptador.jpg" alt="Lineal">
+        <h3>ADAPTADOR 20 AMPERIOS</h3>
+        <p>Código: ADAPTADOR 20A</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/adaptador.jpg" alt="Lineal">
+        <h3>ADAPTADOR 10 AMPERIOS</h3>
+        <p>Código: ADAPTADOR 10A</p>
+        <p class="precio">73.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/transformadorrgb.jpg" alt="Lineal">
+        <h3>Transformador RGB 220V Manual</h3>
+        <p>Código: TRANSFORMADOR RGB 220V</p>
+        <p class="precio">8.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/rgbcompleto.jpg" alt="Lineal">
+        <h3>Transformador RGB 220V Completo</h3>
+        <p>Código: TRANSFORMADOR RGB 220V COMPLETO</p>
+        <p class="precio">35.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/simple.jpg" alt="Lineal">
+        <h3>Transformador Simple 220V </h3>
+        <p>Código: TRANSFORMADOR SIMPLE 220V</p>
+        <p class="precio">10.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/plug.jpg" alt="Lineal">
+        <h3>Transformador Plug 220V </h3>
+        <p>Código: TRANSFORMADOR PLUG 220V</p>
+        <p class="precio">10.00 Bs</p>
+    </div>
+    <div class="producto lineal">
+        <img src="imagenes/doble.jpg" alt="Lineal">
+        <h3>Transformador Doble 220V </h3>
+        <p>Código: TRANSFORMADOR DOBLE 220V</p>
+        <p class="precio">10.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s001ab.jpg" alt="chapa">
+        <h3>CHAPA EVERLEO LINEA BRASIL S001 AB</h3>
+        <p>Código: S001 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s001bn.jpg" alt="chapa">
+        <h3>CHAPA EVERLEO LINEA BRASIL S001 BN</h3>
+        <p>Código: S001 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+   <div class="producto chapa">
+        <img src="imagenes/s001sn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S001 SN</h3>
+        <p>Código: S001 SN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s002ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S002 AB</h3>
+        <p>Código: S002 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s002bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S002 BN</h3>
+        <p>Código: S002 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s003ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S003 AB</h3>
+        <p>Código: S003 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s003bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S003 BN</h3>
+        <p>Código: S003 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s006ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S006 AB</h3>
+        <p>Código: S006 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s006bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S006 BN</h3>
+        <p>Código: S006 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s007ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S007 AB</h3>
+        <p>Código: S007 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s007bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S007 BN</h3>
+        <p>Código: S007 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s008ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S008 AB</h3>
+        <p>Código: S008 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s008bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S008 BN</h3>
+        <p>Código: S008 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s009ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S009 AB</h3>
+        <p>Código: S009 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s009bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S008 BN</h3>
+        <p>Código: S009 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s010ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S010 AB</h3>
+        <p>Código: S010 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s011ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S011 AB</h3>
+        <p>Código: S011 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s011bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S011 BN</h3>
+        <p>Código: S011 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+ <div class="producto chapa">
+        <img src="imagenes/s094ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S094 AB</h3>
+        <p>Código: S094 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s094bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S094 BN</h3>
+        <p>Código: S094 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s068bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S068B BN</h3>
+        <p>Código: S068B BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s89125ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S89-125 AB</h3>
+        <p>Código: S89-125 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s89125bn.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S89-125 BN</h3>
+        <p>Código: S89-125 BN</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s60905ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL S60-905 AB</h3>
+        <p>Código: S60-905 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/610204ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL 610-204 AB</h3>
+        <p>Código: 610-204 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/610608ab.jpg" alt="chapa"">
+        <h3>CHAPA EVERLEO LINEA BRASIL 610-608 AB</h3>
+        <p>Código: 610-608 AB</p>
+        <p class="precio">120.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s70abet.jpg" alt="chapa"">
+        <h3>CILINDRO LLAVE-LLAVE ORO VIEJO</h3>
+        <p>Código: S70AB-ET</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s70bnet.jpg" alt="chapa"">
+        <h3>CILINDRO LLAVE-LLAVE NEGRO</h3>
+        <p>Código: S70-ET-BN</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s70ab5k.jpg" alt="chapa"">
+        <h3>CILINDRO LLAVE-LLAVE ORO VIEJO 5 LLAVES</h3>
+        <p>Código: S70-5K-AB</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s70bn5k.jpg" alt="chapa"">
+        <h3>CILINDRO LLAVE-LLAVE NEGRO 5 LLAVES</h3>
+        <p>Código: S70-5K-BN</p>
+        <p class="precio">30.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/587etab.jpg" alt="chapa"">
+        <h3>CHAPA BOLA EVERLEO ORO VIEJO</h3>
+        <p>Código: TQ587-ET-AB</p>
+        <p class="precio">38.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/587etbn.jpg" alt="chapa"">
+        <h3>CHAPA BOLA EVERLEO NEGRO</h3>
+        <p>Código: TQ587-ET-BN</p>
+        <p class="precio">38.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/587etss.jpg" alt="chapa"">
+        <h3>CHAPA BOLA EVERLEO PLATEADO</h3>
+        <p>Código: TQ587-ET-SS</p>
+        <p class="precio">38.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/4x3x3ab.jpg" alt="chapa"">
+        <h3>BISAGRA 4 PULGADAS ORO VIEJO</h3>
+        <p>Código: 4X3X3 AB</p>
+        <p class="precio">23.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/4x3x3sn.jpg" alt="chapa"">
+        <h3>BISAGRA 4 PULGADAS PLATEADO</h3>
+        <p>Código: 4X3X3 SN</p>
+        <p class="precio">23.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/4x3x3bn.jpg" alt="chapa"">
+        <h3>BISAGRA 4 PULGADAS NEGRO</h3>
+        <p>Código: 4X3X3 BN</p>
+        <p class="precio">23.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/3x2x2ab.jpg" alt="chapa"">
+        <h3>BISAGRA 3 PULGADAS ORO VIEJO</h3>
+        <p>Código: 3X2.5X2.5 AB</p>
+        <p class="precio">17.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/3x2x2sn.jpg" alt="chapa"">
+        <h3>BISAGRA 3 PULGADAS PLATEADO</h3>
+        <p>Código: 3X2.5X2.5 SN</p>
+        <p class="precio">17.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/3x2x2bn.jpg" alt="chapa"">
+        <h3>BISAGRA 3 PULGADAS NEGRO</h3>
+        <p>Código: 3X2.5X2.5 BN</p>
+        <p class="precio">17.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/fs428.jpg" alt="chapa"">
+        <h3>CHAPA SOBREPONER NEGRO</h3>
+        <p>Código: FS428</p>
+        <p class="precio">101.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/fs901.jpg" alt="chapa"">
+        <h3>CHAPA SOBREPONER</h3>
+        <p>Código: FS901</p>
+        <p class="precio">135.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/tq587etab.jpg" alt="chapa"">
+        <h3>CHAPA BOLA ANA ORO VIEJO</h3>
+        <p>Código: TQ587-ET-AB ANA</p>
+        <p class="precio">36.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/tq587etbn.jpg" alt="chapa"">
+        <h3>CHAPA BOLA ANA NEGRO</h3>
+        <p>Código: TQ587-ET-BN ANA</p>
+        <p class="precio">36.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/tq587etss.jpg" alt="chapa"">
+        <h3>CHAPA BOLA ANA PLATEADO</h3>
+        <p>Código: TQ587-ET-SS ANA</p>
+        <p class="precio">36.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/tq587etac.jpg" alt="chapa"">
+        <h3>CHAPA BOLA ANA BRONCE</h3>
+        <p>Código: TQ587-ET-AC ANA</p>
+        <p class="precio">36.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/tq587etpb.jpg" alt="chapa"">
+        <h3>CHAPA BOLA ANA DORADO</h3>
+        <p>Código: TQ587-ET-PB ANA</p>
+        <p class="precio">36.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/559.jpg" alt="chapa"">
+        <h3>CHAPA ANA SOBREPONER</h3>
+        <p>Código: 559 ANA</p>
+        <p class="precio">35.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s068b.jpg" alt="chapa"">
+        <h3>CHAPA ANA S068B</h3>
+        <p>Código: S068B AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s300ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S300 AB</h3>
+        <p>Código: S300 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s092ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S092 AB</h3>
+        <p>Código: S092 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s093ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S093 AB</h3>
+        <p>Código: S093 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s094abana.jpg" alt="chapa"">
+        <h3>CHAPA ANA S094 AB</h3>
+        <p>Código: S094 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s905ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S905 AB</h3>
+        <p>Código: S905 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s085ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S085 AB</h3>
+        <p>Código: S085 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s205ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S205 AB</h3>
+        <p>Código: S205 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s202ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S202 AB</h3>
+        <p>Código: S202 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/s218ab.jpg" alt="chapa"">
+        <h3>CHAPA ANA S218 AB</h3>
+        <p>Código: S218 AB</p>
+        <p class="precio">90.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0801mab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5808-01 MAB</h3>
+        <p>Código: LT5808-01 MAB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0801black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5808-01 BLACK/AB</h3>
+        <p>Código: LT5808-01 BLACK/AB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0302mab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-02 MAB</h3>
+        <p>Código: LT5803-02 MAB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0302black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-02 BLACK</h3>
+        <p>Código: LT5803-02 BLACK/AB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0303blackab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-03 BLACK/AB</h3>
+        <p>Código: LT5803-03 BLACK/AB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0303black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-03 BLACK</h3>
+        <p>Código: LT5803-03 BLACK</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0303blacksn.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-03 BLACK/SN</h3>
+        <p>Código: LT5803-03 BLACK/SN</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0307blackab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-07 BLACK/AB</h3>
+        <p>Código: LT5803-07 BLACK/AB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0307black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-07 BLACK</h3>
+        <p>Código: LT5803-07 BLACK</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0308mab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-08 MAB</h3>
+        <p>Código: LT5803-07 MAB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0308black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5803-08 BLACK</h3>
+        <p>Código: LT5803-08 BLACK</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0510mab.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5805-10 MAB</h3>
+        <p>Código: LT5805-10 MAB</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0510black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5805-10 BLACK</h3>
+        <p>Código: LT5805-10 BLACK</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0609black.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5806-09 BLACK</h3>
+        <p>Código: LT5806-09 BLACK</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/0705mcf.jpg" alt="chapa"">
+        <h3>CHAPA ITALY LT5807-05 MCF</h3>
+        <p>Código: LT5807-05 MCF</p>
+        <p class="precio">190.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/288ae.jpg" alt="chapa"">
+        <h3>PUXADOR</h3>
+        <p>Código: PUXADOR-IL950-288-AE</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+    <div class="producto chapa">
+        <img src="imagenes/096ae.jpg" alt="chapa"">
+        <h3>PUXADOR</h3>
+        <p>Código: PUXADOR-IL518-096-AE</p>
+        <p class="precio">15.00 Bs</p>
+    </div>
+</section>
+
+<div class="paginacion">
+
+<button onclick="cambiarPagina(1)">1</button>
+<button onclick="cambiarPagina(2)">2</button>
+<button onclick="cambiarPagina(3)">3</button>
+<button onclick="cambiarPagina(4)">4</button>
+</div>
+
+<footer>
+    © 2026 Luminarias Foreverleo - Cochabamba Bolivia
+</footer>
+<div id="visor" class="visor">
+    <span id="cerrar" onclick="cerrarImagen()">✖</span>
+    <img id="imagen-grande">
+</div>
+   <script src="js/script.js"></script>
+   
+</body>
+</html>

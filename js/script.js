@@ -1,49 +1,57 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
 
     const buscador = document.getElementById("buscar");
     const productos = document.querySelectorAll(".producto");
+    const visor = document.getElementById("visor");
+    const imagenGrande = document.getElementById("imagen-grande");
 
-    // BUSCADOR
-    buscador.addEventListener("keyup", function(){
+    // --- BUSCADOR ---
+    buscador.addEventListener("keyup", function() {
         let texto = buscador.value.toLowerCase();
-
         productos.forEach(prod => {
             let contenido = prod.textContent.toLowerCase();
             prod.style.display = contenido.includes(texto) ? "" : "none";
         });
     });
 
-    // FILTRO
-    window.filtrar = function(categoria){
+    // --- FILTRO ---
+    window.filtrar = function(categoria) {
         productos.forEach(prod => {
-            if(categoria === "todos"){
+            if (categoria === "todos") {
                 prod.style.display = "";
             } else {
-                prod.style.display =
-                prod.classList.contains(categoria) ? "" : "none";
+                prod.style.display = prod.classList.contains(categoria) ? "" : "none";
             }
         });
     }
 
-    // 🔍 ZOOM (CORREGIDO)
-    const visor = document.getElementById("visor");
-    const imagenGrande = document.getElementById("imagen-grande");
-
+    // --- 🔍 ZOOM (VISOR) ---
     document.querySelectorAll(".producto img").forEach(img => {
-        img.addEventListener("click", function(){
+        img.addEventListener("click", function() {
             visor.style.display = "flex";
-            imagenGrande.src = this.getAttribute("src"); // 👈 CLAVE
+            imagenGrande.src = this.getAttribute("src");
+            document.body.style.overflow = "hidden"; // Bloquea el scroll del fondo
         });
     });
 
-    // CERRAR
-    const cerrar = document.querySelector(".cerrar");
+    // --- FUNCIONES PARA CERRAR ---
+    
+    // 1. Definimos la función que busca tu botón (onclick="cerrarImagen")
+    window.cerrarImagen = function() {
+        visor.style.display = "none";
+        document.body.style.overflow = "auto"; // Devuelve el scroll
+    };
 
-    if(cerrar){
-        cerrar.addEventListener("click", function(){
-            visor.style.display = "none";
-        });
-    }
+    // 2. Opcional: Cerrar también si hacen clic en el fondo negro (fuera de la foto)
+    visor.addEventListener("click", function(e) {
+        if (e.target === visor) {
+            cerrarImagen();
+        }
+    });
+
+    // 3. Opcional: Cerrar con la tecla Escape
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") cerrarImagen();
+    });
 
 });
-  

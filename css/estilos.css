@@ -150,6 +150,9 @@ nav button:hover{
 }
 
 .producto img{
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
     display: block;       /* importante */
     margin: 0 auto;       /* centra horizontal */
     height: 180px;
@@ -301,6 +304,7 @@ footer{
 
 .producto img{
     cursor: pointer;
+    z-index: 10;
 }
 .paginacion{
     display: flex;

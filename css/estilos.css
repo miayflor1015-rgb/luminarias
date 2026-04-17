@@ -1,17 +1,22 @@
 body{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; /* Corta lo que se salga por la derecha */
+    margin: 0;
+    padding: 0;
     margin:0;
     font-family:Arial, sans-serif;
     background:#1D1D1B;
+    position: relative;
 }
 
-header{
+header {
     background: url('../imagenes/logo.png') no-repeat center;
     background-size: cover;
-    
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
+    padding: 20px 40px; /* Un poco menos de padding arriba/abajo */
+    display: flex; 
+    justify-content: space-between; /* Esto empuja los logos a las esquinas */
+    align-items: center; /* Centra todo verticalmente */
     position: relative;
 }
 header::after{
@@ -157,7 +162,8 @@ nav button:hover{
     margin: 0 auto;       /* centra horizontal */
     height: 180px;
     max-width: 100%;
-    object-fit: contain;  /* mantiene proporción */
+    object-fit: contain;
+    z-index: 5;  /* mantiene proporción */
 }
 .producto img{
     transition: transform 0.3s;
@@ -197,6 +203,8 @@ nav button:hover{
     opacity: 0;
     transition: opacity 0.3s;
     border-radius: 12px;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .producto:hover::before{
@@ -232,17 +240,17 @@ box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
 /* Precio antiguo tachado */
-.precio-antiguo{
-    color: gray;
+.precio-antiguo {
     text-decoration: line-through;
-    font-size: 14px;
+    color: #888;
+    margin-right: 10px;
+    font-size: 0.9em;
 }
 
-/* Precio nuevo destacado */
-.precio-nuevo{
-    color: #00ff88;
+.precio-nuevo {
+    color: #7ED957; /* Tu verde de marca */
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 .oferta{
     position: absolute;
@@ -253,6 +261,72 @@ box-shadow:0 15px 35px rgba(0,0,0,0.4);
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 5px;
+    z-index: 20;
+}
+#panel-cotizacion {
+    position: fixed !important;
+    top: 0;           /* Empieza desde arriba */
+    right: -400px;    /* Escondido */
+    width: 320px;
+    height: 100vh !important;
+    height: 100dvh !important;    /* Alto total */
+    background: #1a1a1a;
+    color: white;
+    z-index: 200000;
+    transition: all 0.4s ease; /* Transición suave para todos los cambios */
+    padding: 20px;
+    bottom: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    max-height: 100vh;
+}
+
+#panel-cotizacion.visible {
+    right: 0 !important;
+}
+
+#carrito-flotante {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: #7ED957;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-agregar {
+    background: #7ED957;
+    color: black;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-compartir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Para que ocupe el ancho del panel */
+    margin-top: 15px;
+}
+
+.btn-compartir:hover {
+    background-color: #128C7E;
 }
 
 footer{
@@ -263,9 +337,6 @@ footer{
     margin-top:30px;
 }
 
-@media(max-width:600px){
-    #buscar{width:90%;}
-}
 .contenedor-header{
     display: flex;
     align-items: center;
@@ -306,26 +377,6 @@ footer{
     cursor: pointer;
     z-index: 10;
 }
-.paginacion{
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-    gap: 10px;
-}
-
-.paginacion button{
-    background: #1e1e1e;
-    color: #7ED957;
-    border: 1px solid #7ED957;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.paginacion button:hover{
-    background: #7ED957;
-    color: black;
-}
 
 .info{
     width: 100%;
@@ -358,4 +409,223 @@ footer{
 body{
     margin: 0;
     font-family: Arial, sans-serif;
+}
+.login-overlay {
+    display: none; /* Se activa por JS */
+    position: fixed; /* Se queda fijo aunque hagas scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95); /* Fondo casi negro para ocultar el catálogo */
+    z-index: 99999; /* El número más alto para estar al frente */
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: #1e1e1e;
+    padding: 40px;
+    border: 2px solid #7ED957;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(126, 217, 87, 0.5);
+    text-align: center;
+    width: 350px;
+}
+.login-box h2 {
+    color: #7ED957;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    color: #7ED957;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background: #7ED957;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #95C11F;
+    box-shadow: 0 0 10px #7ED957;
+}
+
+.cerrar-login {
+    position: absolute;
+    top: 10px; right: 15px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+#btn-subir {
+    display: none; /* Se activa con JavaScript */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99; /* Por debajo del login, pero encima de los productos */
+    border: none;
+    outline: none;
+    background-color: #7ED957; /* El color verde de tu marca */
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Botón circular */
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btn-subir:hover {
+    background-color: #5fb53e;
+    transform: scale(1.1); /* Efecto de agrandado al pasar el mouse */
+}
+
+#panel-cotizacion.minimizado {
+    top: auto !important;    /* Quita el anclaje de arriba */
+    bottom: 0 !important;   /* Lo pega abajo */
+    height: 60px !important; /* Altura de la barrita */
+    overflow: hidden !important;
+    padding: 10px 20px !important; /* Reduce el espacio interno */
+    transform: translateY(calc(100% - 60px)) !important;
+}
+
+#btn-minimizar {
+    z-index: 99999;
+    min-width: 35px;
+    min-height: 35px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#lista-articulos {
+    flex-grow: 1 !important;
+    overflow-y: auto !important; 
+    padding-bottom: 20px !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* El bloque del Total y WhatsApp se queda fijo abajo */
+.footer-panel {
+    margin-top: auto;
+    background: #1a1a1a !important;
+    padding: 15px !important;
+    border-top: 2px solid #333 !important;
+}
+.btn-whatsapp {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+}
+/* --- SOLUCIÓN DEFINITIVA DE AJUSTE TOTAL --- */
+html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important; /* Elimina el espacio negro lateral */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+    /* 1. CABECERA COMPACTA */
+    header {
+        padding: 5px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .logo-izq, .logo-der {
+        width: 60px !important; /* Logos muy pequeños para que no empujen */
+    }
+    header h1 {
+        font-size: 14px !important;
+    }
+
+    /* 2. BENEFICIOS EN FILA ÚNICA */
+    .iconos-beneficios {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        padding: 5px 0 !important;
+        height: auto !important;
+    }
+    .iconos-beneficios div {
+        font-size: 8px !important;
+        flex: 1;
+        text-align: center;
+    }
+
+    /* 3. CATÁLOGO DE 3 COLUMNAS SIN DESBORDAMIENTO */
+    .catalogo {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        padding: 4px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .producto {
+        width: 100% !important;
+        padding: 4px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        border: 1px solid #333;
+    }
+
+    .producto img {
+        height: 60px !important; /* Imagen pequeña para que no estire la caja */
+        object-fit: contain;
+    }
+
+    .producto h3 {
+        font-size: 9px !important;
+        height: 22px;
+        overflow: hidden;
+    }
+
+    /* EL SECRETO: Achicar los botones verdes para que no ensanchen la columna */
+    .btn-agregar {
+        font-size: 7px !important; /* Letra muy pequeña */
+        padding: 4px 1px !important;
+        width: 100% !important;
+        white-space: normal !important; /* Permite que el texto se rompa en 2 líneas */
+        line-height: 1;
+    }
+
+    /* 4. PANEL DE RESUMEN AL 100% */
+    #panel-cotizacion {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
 }

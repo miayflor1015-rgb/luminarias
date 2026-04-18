@@ -547,85 +547,108 @@ body{
     width: 100% !important;
     margin-top: 10px !important;
 }
-/* --- SOLUCIÓN DEFINITIVA DE AJUSTE TOTAL --- */
-html, body {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important; /* Elimina el espacio negro lateral */
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
+/* --- LIMPIEZA TOTAL PARA CELULAR --- */
+/* --- OPTIMIZACIÓN FINAL PARA MÓVIL --- */
 @media (max-width: 600px) {
-    /* 1. CABECERA COMPACTA */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
     header {
-        padding: 5px !important;
         width: 100% !important;
-        box-sizing: border-box;
-    }
-    .logo-izq, .logo-der {
-        width: 60px !important; /* Logos muy pequeños para que no empujen */
-    }
-    header h1 {
-        font-size: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    /* 2. BENEFICIOS EN FILA ÚNICA */
-    .iconos-beneficios {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-around !important;
-        padding: 5px 0 !important;
+    .logo-izq, .logo-der {
+        max-width: 120px !important; /* Tamaño controlado */
         height: auto !important;
     }
-    .iconos-beneficios div {
-        font-size: 8px !important;
-        flex: 1;
-        text-align: center;
+    .btn-agregar {
+        width: 100% !important;
+        font-size: 8px !important; /* Letra bien pequeña */
+        padding: 5px 2px !important;
+        white-space: normal; /* Evita que el texto se parta en dos */
+        text-transform: uppercase;
     }
 
-    /* 3. CATÁLOGO DE 3 COLUMNAS SIN DESBORDAMIENTO */
+    /* 1. ACHICAR SECCIÓN DE BENEFICIOS (MARCADA) */
+    .iconos-beneficios {
+        display: flex !important;
+        flex-direction: row !important; /* Los pone en fila horizontal */
+        justify-content: space-evenly !important;
+        padding: 5px 0 !important;
+        background: #1a1a1a !important;
+        height: 50px !important; /* Altura mínima */
+    }
+
+    .iconos-beneficios div {
+        display: flex !important;
+        flex-direction: row !important; /* Icono al lado del texto */
+        align-items: center !important;
+        font-size: 8px !important; /* Letra muy pequeña */
+    }
+
+    .iconos-beneficios img, .iconos-beneficios i {
+        width: 14px !important; 
+        height: 14px !important;
+        margin-right: 3px !important;
+    }
+
+    /* 2. CATÁLOGO EN 3 COLUMNAS REALES */
     .catalogo {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 4px !important;
-        padding: 4px !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 fotos por fila */
         width: 100% !important;
-        box-sizing: border-box !important;
+        max-width: 100vw !important;
+        gap: 5px !important;
+        padding: 5px !important;
+        box-sizing: border-box !important; /* Incluye el padding en el ancho */
     }
 
     .producto {
         width: 100% !important;
-        padding: 4px !important;
         margin: 0 !important;
+        padding: 5px !important;
+        border-radius: 4px !important;
         box-sizing: border-box !important;
-        border: 1px solid #333;
+        font-size: 10px; /* Achicamos letra para que quepa todo */
     }
 
+    /* Achicar la imagen del foco para que entren 3 */
     .producto img {
-        height: 60px !important; /* Imagen pequeña para que no estire la caja */
-        object-fit: contain;
+        height: 65px !important; 
+        width: auto !important;
+        margin: 0 auto !important;
     }
 
     .producto h3 {
         font-size: 9px !important;
-        height: 22px;
-        overflow: hidden;
+        height: 22px !important;
+        margin: 2px 0 !important;
     }
 
-    /* EL SECRETO: Achicar los botones verdes para que no ensanchen la columna */
-    .btn-agregar {
-        font-size: 7px !important; /* Letra muy pequeña */
-        padding: 4px 1px !important;
-        width: 100% !important;
-        white-space: normal !important; /* Permite que el texto se rompa en 2 líneas */
-        line-height: 1;
+    .producto p {
+        font-size: 8px !important;
+        margin: 0 !important;
     }
 
-    /* 4. PANEL DE RESUMEN AL 100% */
-    #panel-cotizacion {
-        width: 100% !important;
+    /* Achicar el cuadro de entrada de texto (Cajas) */
+    .input-cajas {
+        height: 22px !important;
+        font-size: 10px !important;
+    }
+
+    /* 3. ARREGLO DEL PANEL QUE SE VA ABAJO */
+    #panel-cotizacion.minimizado {
+        width: 100% !important; /* Ocupa todo el ancho del cel */
         left: 0 !important;
         right: 0 !important;
+        border-radius: 0 !important; /* Quita bordes redondeados para que pegue perfecto */
+        /* Esto evita que desaparezca. Deja 60px visibles (la barra de Resumen) */
+        transform: translateY(calc(100% - 60px)) !important;
+        transition: transform 0.3s ease-in-out !important;
     }
 }

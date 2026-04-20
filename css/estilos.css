@@ -593,23 +593,34 @@ body{
     .iconos-beneficios {
         display: flex !important;
         flex-direction: row !important; /* Los pone en fila horizontal */
-        justify-content: space-evenly !important;
-        padding: 5px 0 !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        padding: 10px 2px !important; /* Menos espacio arriba y abajo */
+        gap: 5px !important; /* Espacio pequeño entre cada uno */
         background: #1a1a1a !important;
         height: 50px !important; /* Altura mínima */
     }
 
     .iconos-beneficios div {
         display: flex !important;
-        flex-direction: row !important; /* Icono al lado del texto */
+        flex-direction: column !important; /* Icono al lado del texto */
         align-items: center !important;
+        text-align: center !important;
+        flex: 1; /* Todos ocupan el mismo ancho */
         font-size: 8px !important; /* Letra muy pequeña */
     }
 
     .iconos-beneficios img, .iconos-beneficios i {
+        font-size: 18px !important; /* Icono más pequeño */
+        margin-bottom: 2px !important;
         width: 14px !important; 
         height: 14px !important;
         margin-right: 3px !important;
+    }
+    .iconos-beneficios span {
+        font-size: 8px !important; /* Letra bien pequeñita para que no se amontone */
+        line-height: 1 !important;
+        white-space: normal !important; /* Permite que el texto use dos renglones si es necesario */
     }
 
     /* 2. CATÁLOGO EN 3 COLUMNAS REALES */

@@ -556,6 +556,7 @@ body{
         position: relative;
     }
     header {
+        background: red !important;
         width: 100% !important;
         padding: 10px 5px !important; /* Menos espacio arriba y abajo */
         min-height: auto !important;   /* Que no tenga una altura mínima grande */

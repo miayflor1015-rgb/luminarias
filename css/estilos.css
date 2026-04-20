@@ -590,39 +590,31 @@ body{
     }
 
     /* 1. ACHICAR SECCIÓN DE BENEFICIOS (MARCADA) */
-    .iconos-beneficios {
+    /* SECCIÓN DE BENEFICIOS EN UNA SOLA FILA */
+    .info-contenido { 
         display: flex !important;
-        flex-direction: row !important; /* Los pone en fila horizontal */
-        justify-content: space-around !important;
+        flex-direction: row !important; /* Obliga a la fila */
+        justify-content: center !important;
         align-items: center !important;
-        padding: 10px 2px !important; /* Menos espacio arriba y abajo */
-        gap: 5px !important; /* Espacio pequeño entre cada uno */
-        background: #1a1a1a !important;
-        height: 50px !important; /* Altura mínima */
+        gap: 10px !important;
+        padding: 10px 0 !important;
     }
 
-    .iconos-beneficios div {
+    .info-contenido .item {
         display: flex !important;
-        flex-direction: column !important; /* Icono al lado del texto */
+        flex-direction: row !important; /* Icono al lado del texto */
         align-items: center !important;
-        text-align: center !important;
-        flex: 1; /* Todos ocupan el mismo ancho */
-        font-size: 8px !important; /* Letra muy pequeña */
+        gap: 4px !important;
     }
 
-    .iconos-beneficios img, .iconos-beneficios i {
-        font-size: 18px !important; /* Icono más pequeño */
-        margin-bottom: 2px !important;
-        width: 14px !important; 
-        height: 14px !important;
-        margin-right: 3px !important;
-    }
-    .iconos-beneficios span {
-        font-size: 8px !important; /* Letra bien pequeñita para que no se amontone */
-        line-height: 1 !important;
-        white-space: normal !important; /* Permite que el texto use dos renglones si es necesario */
+    .info-contenido .item span {
+        font-size: 9px !important; /* Texto bien compacto */
+        white-space: nowrap !important; /* Evita que el texto salte de línea */
     }
 
+    .info-contenido .item .icono {
+        font-size: 12px !important;
+    }
     /* 2. CATÁLOGO EN 3 COLUMNAS REALES */
     .catalogo {
         display: grid !important;
@@ -686,5 +678,13 @@ body{
         /* Esto evita que desaparezca. Deja 60px visibles (la barra de Resumen) */
         transform: translateY(calc(100% - 60px)) !important;
         transition: transform 0.3s ease-in-out !important;
+    }
+    .oferta-tag, .oferta, [class*="oferta"] { 
+        font-size: 8px !important;
+        padding: 2px 4px !important;
+        top: 5px !important;
+        left: 5px !important;
+        min-width: auto !important;
+        height: auto !important;
     }
 }

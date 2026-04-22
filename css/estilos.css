@@ -691,4 +691,18 @@ body{
     transform: translateY(0) !important;
     display: block !important;
     }
+    .close-panel, .btn-cerrar, #panel-cotizacion .x-button {
+    position: absolute !important;
+    top: 10px !important;
+    right: 15px !important;
+    width: 40px !important;  /* Área de toque más grande para el dedo */
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important; /* El valor más alto para que nada lo tape */
+    cursor: pointer !important;
+    background: rgba(0,0,0,0.1); /* Un fondo sutil para saber dónde tocar */
+    border-radius: 50%;
+    }
 }

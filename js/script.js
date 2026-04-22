@@ -221,8 +221,9 @@ function restablecerCotizacion() {
 }
 
 function cerrarPanel() {
-    const panel = document.getElementById("panel-cotizacion");
-    if (panel) panel.classList.remove("visible");
+    const panel = document.getElementById('panel-cotizacion');
+    panel.classList.remove('activo');
+    panel.classList.add('minimizado'); // Esto lo manda abajo en el celular
 }
 
 function compartirCotizacion() {

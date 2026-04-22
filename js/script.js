@@ -173,6 +173,7 @@ function agregarALista(boton) {
     panel.classList.add("visible");
     panel.classList.remove("minimizado");
     document.getElementById("btn-minimizar").innerHTML = "−";
+    document.getElementById('panel-cotizacion').classList.add('activo');
 }
 function actualizarResumen() {
     const listaHTML = document.getElementById("lista-articulos");

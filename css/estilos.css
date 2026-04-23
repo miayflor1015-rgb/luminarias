@@ -14,22 +14,33 @@ header {
     background: url('../imagenes/logo-1.PNG') no-repeat center;
     background-size: cover;
     flex-direction: column; /* Apila la imagen y luego el texto */
-    padding: 15px; 
+    width: 100%;
+    height: 80px !important; /* Ajusta este número (ej. 300px o 350px) según qué tan alta la quieras */
+    padding: 0 30px;
     display: flex; 
-    justify-content: center; /* Mantiene los lados en su sitio */
+    justify-content: space-between;
     align-items: center; 
     position: relative;
-    min-height: 250px;
     overflow: hidden;
 }
 .imagen-decorativa {
-    width: 100%;       /* Hace que se expanda a lo ancho */
+    position: absolute; /* La mandamos al fondo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  
+    height: 100%;     /* Hace que se expanda a lo ancho */
     max-width: 600px;  /* Ajusta este número para que no sea GIGANTE en PC */
     height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
+    object-fit: cover; /* Esto hace que la foto se adapte sin deformarse */
+    object-position: center; /* Centra la parte de las lámparas */
+    z-index: 0; /* Por detrás de todo */
 }
 .titulo {
+    position: relative;
+    z-index: 2;
     text-align: center;
     width: 100%;
 }
@@ -49,15 +60,26 @@ header {
 }
 
 /* Limpieza de los logos laterales (quitamos la duplicación) */
-.logo-izq { position: absolute; left: 20px; top: 20px; width: 150px; }
-.logo-der { position: absolute; right: 20px; top: 20px; width: 150px; }
+.logo-izq { 
+    position: absolute; 
+    left: 20px; top: 20px; 
+    width: 150px;
+    z-index: 2; 
+}
+.logo-der { 
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    width: 150px;
+    z-index: 2; 
+}
 
 header::after {
     content: "";
     position: absolute;
     top:0; left:0; width:100%; height:100%;
     background: rgba(0,0,0,0.5);
-    z-index: 0;
+    z-index: 1;
 }
 
 header * {

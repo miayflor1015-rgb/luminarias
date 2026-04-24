@@ -735,13 +735,17 @@ body{
         width: 40px !important; /* Estándar de Google para dedos */
         height: 40px !important;
         z-index: 200001 !important; /* Más alto que el panel */
-        background: #333 !important; /* Fondo oscuro para que se vea */
+        background: none !important; /* Fondo oscuro para que se vea */
         color: #7ED957 !important; /* X en verde para que resalte */
         border-radius: 50% !important;
-        display: flex !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
         align-items: center !important;
+        cursor: pointer !important;
         justify-content: center !important;
+        font-weight: bold !important;
         font-size: 24px !important;
-        border: 1px solid #7ED957 !important;
+        border: none !important;
     }
 }

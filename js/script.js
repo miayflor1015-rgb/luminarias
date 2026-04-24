@@ -220,10 +220,18 @@ function restablecerCotizacion() {
     }
 }
 
-function cerrarPanel() {
+function cerrarTotalmente() {
+    console.log("Cerrando panel..."); // Esto es para probar si funciona
     const panel = document.getElementById('panel-cotizacion');
-    panel.classList.remove('activo');
-    panel.classList.add('minimizado'); // Esto lo manda abajo en el celular
+    if (panel) {
+        // Quitamos la clase 'activo' (que lo muestra)
+        panel.classList.remove('visible');
+        // También quitamos 'minimizado' para que la próxima vez abra normal
+        panel.classList.remove('minimizado');
+        
+        // OPCIONAL: Si tu CSS no usa clases, usa esta línea:
+        // panel.style.display = 'none'; 
+    }
 }
 
 function compartirCotizacion() {

@@ -11,8 +11,6 @@
 <body>
 
 <<header>
-    <img src="imagenes/logo-1.png" class="imagen-decorativa">
-
     <img src="imagenes/logo4.png" class="logo-izq">
     <img src="imagenes/logo4.png" class="logo-der">
 
@@ -996,12 +994,7 @@
         <p class="codigo">Código: CINTA NEON-220V-BLANCO</p>
         <p class="precio">1000.00 Bs</p>
     </div>
-    <div class="producto lineal" data-por-caja="1">
-        <img src="imagenes/neonazul.jpg" alt="Lineal">
-        <h3>Cinta Neon 220V Azul</h3>
-        <p class="codigo">Código: CINTA NEON-220V-AZUL</p>
-        <p class="precio">1000.00 Bs</p>
-    </div>
+    
     <div class="producto lineal" data-por-caja="1">
         <img src="imagenes/neonceleste.jpg" alt="Lineal">
         <h3>Cinta Neon 220V Azul</h3>
@@ -1730,7 +1723,7 @@
         <h3 style="margin:0; color:white;">Resumen</h3>
         <div>
             <button onclick="restablecerCotizacion()" style="background:#444; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; font-size:11px; margin-right:10px;">Limpiar Todo</button>
-            <button onclick="cerrarPanel()" style="cursor:pointer; background:none; border:none; color:white; font-size:20px;">×</button>
+            <button onclick="cerrarTotalmente()" id="btn-cerrar" style="cursor:pointer; background:none; border:none; color:white; font-size:20px;">×</button>
             <button onclick="minimizarPanel()" id="btn-minimizar">−</button>
         </div>
     </div>

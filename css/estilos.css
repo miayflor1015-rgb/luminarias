@@ -725,21 +725,17 @@ body{
         height: auto !important;
     }
     #panel-cotizacion.visible {
-    transform: translateY(0) !important;
-    display: block !important;
+        transform: translateY(0) !important;
+        display: block !important;
     }
-    .close-panel, .btn-cerrar, #panel-cotizacion .x-button {
-    position: absolute !important;
-    top: 10px !important;
-    right: 15px !important;
-    width: 40px !important;  /* Área de toque más grande para el dedo */
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    z-index: 99999 !important; /* El valor más alto para que nada lo tape */
-    cursor: pointer !important;
-    background: rgba(0,0,0,0.1); /* Un fondo sutil para saber dónde tocar */
-    border-radius: 50%;
+    #btn-cerrar {
+        position: absolute !important;
+        top: 10px !important;
+        right: 15px !important;
+        width: 44px !important; /* Estándar de Google para dedos */
+        height: 44px !important;
+        z-index: 99999 !important;
+        background: rgba(255,255,255,0.1) !important; /* Un círculo sutil */
+        border-radius: 50% !important;
     }
 }

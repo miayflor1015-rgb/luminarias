@@ -221,13 +221,13 @@ function restablecerCotizacion() {
 }
 
 function cerrarTotalmente() {
-    console.log("Cerrando panel..."); // Esto es para probar si funciona
     const panel = document.getElementById('panel-cotizacion');
     if (panel) {
         // Quitamos la clase 'activo' (que lo muestra)
         panel.classList.remove('visible');
         // También quitamos 'minimizado' para que la próxima vez abra normal
         panel.classList.remove('minimizado');
+        panel.classList.remove('visible');
         
         // OPCIONAL: Si tu CSS no usa clases, usa esta línea:
         // panel.style.display = 'none'; 

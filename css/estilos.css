@@ -729,13 +729,19 @@ body{
         display: block !important;
     }
     #btn-cerrar {
-        position: absolute !important;
-        top: 10px !important;
-        right: 15px !important;
-        width: 44px !important; /* Estándar de Google para dedos */
-        height: 44px !important;
-        z-index: 99999 !important;
-        background: rgba(255,255,255,0.1) !important; /* Un círculo sutil */
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        width: 40px !important; /* Estándar de Google para dedos */
+        height: 40px !important;
+        z-index: 200001 !important; /* Más alto que el panel */
+        background: #333 !important; /* Fondo oscuro para que se vea */
+        color: #7ED957 !important; /* X en verde para que resalte */
         border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 24px !important;
+        border: 1px solid #7ED957 !important;
     }
 }

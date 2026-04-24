@@ -724,7 +724,7 @@ body{
         min-width: auto !important;
         height: auto !important;
     }
-    #panel-cotizacion.activo {
+    #panel-cotizacion.visible {
     transform: translateY(0) !important;
     display: block !important;
     }

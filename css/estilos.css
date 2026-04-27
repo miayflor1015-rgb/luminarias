@@ -722,6 +722,7 @@ body{
         /* Esto evita que desaparezca. Deja 60px visibles (la barra de Resumen) */
         transform: translateY(calc(100% - 60px)) !important;
         transition: transform 0.3s ease-in-out !important;
+        color: #7ED957 !important;
     }
     .oferta-tag, .oferta, [class*="oferta"] { 
         font-size: 8px !important;

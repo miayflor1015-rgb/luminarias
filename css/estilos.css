@@ -586,6 +586,13 @@ body{
         text-align: center !important;
         justify-content: center !important;
     }
+    .header-cotizacion > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Mueve todo a la derecha */
+    gap: 15px !important;                 /* Espacio entre X y - */
+    padding-right: 10px !important;
+    }
     .imagen-decorativa {
         height: 100% !important;
         object-fit: cover !important;
@@ -729,23 +736,31 @@ body{
         display: block !important;
     }
     #btn-cerrar {
-        position: fixed !important;
-        top: 20px !important;
-        right: 20px !important;
-        width: 40px !important; /* Estándar de Google para dedos */
-        height: 40px !important;
-        z-index: 200001 !important; /* Más alto que el panel */
-        background: none !important; /* Fondo oscuro para que se vea */
-        color: #7ED957 !important; /* X en verde para que resalte */
-        border-radius: 50% !important;
-        display: inline-block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        align-items: center !important;
-        cursor: pointer !important;
-        justify-content: center !important;
-        font-weight: bold !important;
-        font-size: 24px !important;
-        border: none !important;
+    position: static !important;
+    background: none !important;
+    color: #7ED957 !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important; /* Cambiado a flex para centrar mejor */
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    width: auto !important; /* Deja que el tamaño sea natural */
+    height: auto !important;
+    }
+    #btn-minimizar {
+    position: static !important;
+    background: none !important;
+    color: white !important;
+    font-size: 24px !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
     }
 }

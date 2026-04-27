@@ -752,15 +752,4 @@ body{
     width: auto !important; /* Deja que el tamaño sea natural */
     height: auto !important;
     }
-    #btn-minimizar {
-    position: static !important;
-    background: none !important;
-    color: white !important;
-    font-size: 24px !important;
-    border: none !important;
-    cursor: pointer !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: 1 !important;
-    }
 }

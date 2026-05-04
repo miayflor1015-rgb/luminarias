@@ -286,3 +286,22 @@ function minimizarPanel() {
     // Cambia el símbolo
     btn.innerHTML = estaMin ? "+" : "−";
 }
+function verDetalles(elemento) {
+    if (event) event.stopPropagation();
+    // 'elemento' es la imagen que tocaste
+    const nombre = elemento.getAttribute('data-nombre');
+    const especificaciones = elemento.getAttribute('data-specs');
+    const imagenSrc = elemento.src;
+
+    // Llenamos el modal con esa información
+    document.getElementById('modal-titulo').innerText = nombre;
+    document.getElementById('modal-specs').innerText = especificaciones;
+    document.getElementById('modal-img').src = imagenSrc;
+
+    // Mostramos el modal
+    document.getElementById('modal-detalles').style.display = "block";
+}
+
+function cerrarModal() {
+    document.getElementById('modal-detalles').style.display = "none";
+}

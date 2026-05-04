@@ -754,3 +754,49 @@ body{
     height: auto !important;
     }
 }
+#modal-detalles {
+    display: none; 
+    position: fixed; 
+    /* Un valor más alto que cualquier otro elemento */
+    z-index: 9999999 !important; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.85); /* Oscurece más el fondo */
+    backdrop-filter: blur(8px);    /* Efecto de desenfoque elegante */
+}
+
+#modal-detalles .contenedor-contenido {
+    background: #1a1a1a;
+    margin: 10vh auto; /* 10% de la altura de la pantalla */
+    padding: 25px;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 20px;
+    border: 1px solid #7ED957;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(126, 217, 87, 0.2);
+}
+
+#modal-img {
+    width: 100% !important; /* Que ocupe el ancho del cuadrito */
+    max-width: 200px !important; 
+    height: auto !important;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+#modal-detalles button {
+    background: #7ED957 !important;
+    color: black !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+}

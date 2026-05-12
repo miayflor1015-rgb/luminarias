@@ -299,7 +299,7 @@ function verDetalles(elemento) {
     document.getElementById('modal-img').src = imagenSrc;
 
     // Mostramos el modal
-    document.getElementById('modal-detalles').style.display = "block";
+    document.getElementById('modal-detalles').style.display = "flex";
 }
 
 function cerrarModal() {

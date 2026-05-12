@@ -757,35 +757,50 @@ body{
 #modal-detalles {
     display: none; 
     position: fixed; 
-    /* Un valor más alto que cualquier otro elemento */
     z-index: 9999999 !important; 
     left: 0; 
     top: 0; 
     width: 100%; 
     height: 100%; 
-    background: rgba(0,0,0,0.85); /* Oscurece más el fondo */
-    backdrop-filter: blur(8px);    /* Efecto de desenfoque elegante */
+    background: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(8px);
+    
+    /* ESTO ES LO NUEVO PARA CENTRAR */
+    display: none; /* Se cambia a 'flex' vía JS al abrir */
+    align-items: center;    /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
 
 #modal-detalles .contenedor-contenido {
-    background: #1a1a1a;
-    margin: 10vh auto; /* 10% de la altura de la pantalla */
-    padding: 25px;
-    width: 90%;
-    max-width: 380px;
-    border-radius: 20px;
-    border: 1px solid #7ED957;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(126, 217, 87, 0.2);
+    background: #1a1a1a !important;
+    /* Eliminamos el margin: 10vh auto para que no empuje hacia abajo */
+    margin: 0 !important; 
+    padding: 20px !important;
+    width: 90% !important;
+    max-width: 400px !important; 
+    border-radius: 20px !important;
+    border: 1px solid #7ED957 !important;
+    
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    
+    height: auto !important;
+    max-height: 85vh !important; /* Un poco más pequeña para asegurar que flote */
+    overflow: hidden !important;
 }
 
 #modal-img {
-    width: 100% !important; /* Que ocupe el ancho del cuadrito */
-    max-width: 200px !important; 
+    width: auto !important;      /* Cambiado de 100% a auto */
+    max-width: 100% !important; 
+    
+    /* ESTO ES LO MÁS IMPORTANTE */
+    max-height: 45vh !important; /* La foto nunca ocupará más de la mitad de la pantalla */
+    
     height: auto !important;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    object-fit: contain;
+    object-fit: contain !important; /* Ajusta la foto sin deformarla */
+    border-radius: 12px !important;
+    align-self: center !important;
 }
 #modal-detalles button {
     background: #7ED957 !important;
@@ -799,4 +814,22 @@ body{
     width: 100%;
     margin-top: 15px;
     cursor: pointer;
+}
+#modal-titulo {
+    color: #7ED957 !important;
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+    font-weight: bold !important;
+}
+
+/* Ajuste para el cuadro de specs */
+#modal-specs {
+    background: #252525 !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #ddd !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }

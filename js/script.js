@@ -190,11 +190,18 @@ function actualizarResumen() {
 
     carritoCotizacion.forEach((item, index) => {
         sumaTotal += item.subtotal;
+
+        // Calculamos el precio unitario para mostrarlo (subtotal / unidades totales)
+        const precioUnitario = item.subtotal / item.cantidadTotal;
+
         listaHTML.innerHTML += `
             <div style="border-bottom: 1px solid #333; padding: 10px 0; position: relative;">
                 <p style="margin:0; font-size:14px; padding-right: 25px;"><strong>${item.nombre}</strong></p>
                 <p style="margin:0; font-size:12px; color: #bbb;">
-                    ${item.cajas} cajas (Total: ${item.cantidadTotal} unid.) - Bs. ${item.subtotal.toFixed(2)}
+                    ${item.cajas} cajas (${item.cantidadTotal} unid.)
+                </p>
+                <p style="margin:2px 0 0 0; font-size:13px; color: #7ED957;">
+                    ${item.cantidadTotal} unid. × Bs. ${precioUnitario.toFixed(2)} = <strong>Bs. ${item.subtotal.toFixed(2)}</strong>
                 </p>
                 <button onclick="quitarDelCarrito(${index})" 
                         style="position:absolute; top:10px; right:0; background:none; border:none; color:#ff4d4d; cursor:pointer; font-weight:bold; font-size:16px;">
@@ -203,8 +210,9 @@ function actualizarResumen() {
             </div>
         `;
     });
-
-    totalHTML.innerText = sumaTotal.toLocaleString('en-US', {minimumFractionDigits: 2});
+    
+    // No olvides actualizar los totales abajo si tu función sigue
+    if(totalHTML) totalHTML.innerText = `Bs. ${sumaTotal.toFixed(2)}`;
     if(contador) contador.innerText = carritoCotizacion.length;
 }
 

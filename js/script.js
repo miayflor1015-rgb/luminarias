@@ -254,7 +254,7 @@ function compartirCotizacion() {
     
     if (nombreCliente === "") {
         alert("Por favor, ingresa el nombre del cliente.");
-        inputCliente.focus(); // Pone el cursor en el cuadrito para que escriban
+        if(inputCliente) inputCliente.focus();
         return;
     }
 
@@ -265,8 +265,14 @@ function compartirCotizacion() {
 
     let sumaTotal = 0;
     carritoCotizacion.forEach(p => {
-        texto += `• ${p.nombre}\n`;
-        texto += `  ${p.cajas} cajas (${p.cantidadTotal} unid.) - Bs. ${p.subtotal.toFixed(2)}\n\n`;
+        // CALCULAMOS EL PRECIO UNITARIO
+        const precioUnitario = p.subtotal / p.cantidadTotal;
+
+        texto += `• *${p.nombre}*\n`;
+        texto += `  ${p.cajas} cajas (${p.cantidadTotal} unid.)\n`;
+        // NUEVA LÍNEA CON DESGLOSE:
+        texto += `  ${p.cantidadTotal} unid. x Bs. ${precioUnitario.toFixed(2)} = *Bs. ${p.subtotal.toFixed(2)}*\n\n`;
+        
         sumaTotal += p.subtotal;
     });
 

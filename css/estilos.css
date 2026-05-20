@@ -353,6 +353,8 @@ box-shadow:0 15px 35px rgba(0,0,0,0.4);
 
 footer{
     background:#95C11F;
+    font-size: 18px !important;
+    font-weight: bold !important;
     color:#1D1D1B;
     text-align:center;
     padding:20px;
@@ -504,6 +506,22 @@ body{
     color: white;
     font-size: 24px;
     cursor: pointer;
+}
+.logo-login {
+    display: block;
+    margin: 0 auto 15px auto; /* El 'auto' lo centra horizontalmente y el '15px' lo separa del título */
+    width: 100%;
+    max-width: 180px;         /* Controla qué tan grande se verá (puedes subirlo a 200px si lo quieres más grande) */
+    height: auto;             /* Mantiene la proporción para que no se deforme */
+    object-fit: contain;
+}
+
+/* Asegura que los elementos internos del login sigan bien alineados */
+.contenedor-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido verticalmente */
+    padding: 25px;
 }
 #btn-subir {
     display: none; /* Se activa con JavaScript */

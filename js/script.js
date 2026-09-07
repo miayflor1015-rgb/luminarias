@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const u = document.getElementById("user").value;
             const p = document.getElementById("pass").value;
 
-            if (u === "forev" && p === "Forev1825") {
+            if (u === "forev" && p === "Forev1826") {
                 loginModal.style.display = "none";
                 document.body.style.overflow = "auto"; 
             } else {
